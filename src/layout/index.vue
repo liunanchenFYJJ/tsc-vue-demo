@@ -8,11 +8,18 @@
  -->
 <template>
   <div id="layout">
-    <nav>
+    <div id="left">
       <side-bar></side-bar>
-    </nav>
-    <nav-bar></nav-bar>
-    <router-view></router-view>
+    </div>
+    <div id="right">
+      <div id="header">
+        <nav-bar></nav-bar>
+      </div>
+      <div id="content">
+        <router-view></router-view>
+      </div>
+      <!-- <div id="footer">footer</div> -->
+    </div>
   </div>
 </template>
 <script>
@@ -26,6 +33,27 @@ export default {
 </script>
 <style lang="scss" scoped>
   #layout {
+    display: flex;
+    height: 100%;
+    #left {
+      height: 100%;
+      background: lightblue;
+    }
+    #right {
+      height: 100%;
+      width: 100%;
+      background: lightpink;
+      #header {
+        height: 84px;
+        background: lightsalmon;
+      }
+      #content {
+        height: calc(100% - 84px);
+        background: lightseagreen;
+      }
+      #footer {
 
+      }
+    }
   }
 </style>
