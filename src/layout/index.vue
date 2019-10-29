@@ -4,7 +4,7 @@
  * @Author: https://github.com/liunanchenFYJJ
  * @Date: 2019-10-28 17:27:04
  * @LastEditors: https://github.com/liunanchenFYJJ
- * @LastEditTime: 2019-10-29 10:19:51
+ * @LastEditTime: 2019-10-29 19:16:51
  -->
 <template>
   <div id="layout">
@@ -48,24 +48,19 @@ export default {
     display: flex;
     height: 100%;
     #left {
-      height: 100%;
-      background: lightblue;
+      height: 100px;
     }
     #right {
       height: 100%;
       width: 100%;
-      background: lightpink;
       #header {
         height: 84px;
-        background: lightsalmon;
       }
       #content {
         height: calc(100% - 84px);
         background: lightseagreen;
       }
-      #footer {
-
-      }
+      #footer {}
     }
   }
   .hideSideBar {
