@@ -4,16 +4,17 @@
  * @Author: https://github.com/liunanchenFYJJ
  * @Date: 2019-10-28 17:27:04
  * @LastEditors: https://github.com/liunanchenFYJJ
- * @LastEditTime: 2019-10-28 19:06:49
+ * @LastEditTime: 2019-10-29 10:19:51
  -->
 <template>
   <div id="layout">
-    <div id="left">
+    <div id="left" :class="toggleClass">
       <side-bar></side-bar>
     </div>
     <div id="right">
       <div id="header">
         <nav-bar></nav-bar>
+        <tags-view></tags-view>
       </div>
       <div id="content">
         <router-view></router-view>
@@ -25,10 +26,21 @@
 <script>
 import SideBar from './SideBar/index.vue';
 import NavBar from './NavBar/index.vue';
+import TagsView from './TagsView/index.vue';
 
 export default {
   name: 'Layout',
-  components: { SideBar, NavBar },
+  components: { SideBar, NavBar, TagsView },
+  data() {
+    return {};
+  },
+  computed: {
+    toggleClass() {
+      return {
+        hideSideBar: this.$store.state.isSideBarOpen,
+      };
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -55,5 +67,8 @@ export default {
 
       }
     }
+  }
+  .hideSideBar {
+    width: 64px;
   }
 </style>

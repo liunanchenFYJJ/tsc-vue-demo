@@ -4,7 +4,7 @@
  * @Author: https://github.com/liunanchenFYJJ
  * @Date: 2019-10-28 17:46:31
  * @LastEditors: https://github.com/liunanchenFYJJ
- * @LastEditTime: 2019-10-28 18:47:11
+ * @LastEditTime: 2019-10-29 10:27:02
  -->
 <template>
   <div class="sidebar">
@@ -13,7 +13,7 @@
       :collapse="isCollapse"
       background-color="#303133"
       text-color="#fff">
-      <el-menu-item index="1">DashBoard</el-menu-item>
+      <el-menu-item index="1">Dash</el-menu-item>
       <el-submenu index="2">
         <el-menu-item index="">2</el-menu-item>
       </el-submenu>
@@ -24,9 +24,12 @@
 export default {
   name: 'SideBar',
   data() {
-    return {
-      isCollapse: false,
-    };
+    return {};
+  },
+  computed: {
+    isCollapse() {
+      return this.$store.state.isSideBarOpen;
+    },
   },
 };
 </script>
