@@ -4,7 +4,7 @@
  * @Author: https://github.com/liunanchenFYJJ
  * @Date: 2019-10-28 17:46:31
  * @LastEditors: https://github.com/liunanchenFYJJ
- * @LastEditTime: 2019-10-29 10:53:01
+ * @LastEditTime: 2019-10-30 19:18:44
  -->
 <template>
   <div class="sidebar">
@@ -22,11 +22,10 @@
     <el-menu
       default-active="1-4-1"
       class="el-menu-vertical-demo"
-      @open="handleOpen"
-      @close="handleClose"
       :collapse="isCollapse"
       background-color="#303133"
-      text-color="#fff">
+      text-color="#fff"
+      :router="true">
       <el-submenu index="1">
         <template slot="title">
           <i class="el-icon-location"></i>
@@ -49,9 +48,9 @@
         <i class="el-icon-menu"></i>
         <span slot="title">导航二</span>
       </el-menu-item>
-      <el-menu-item index="3">
+      <el-menu-item index="/guide">
         <i class="el-icon-setting"></i>
-        <span slot="title">导航三</span>
+        <span slot="title">使用指引</span>
       </el-menu-item>
     </el-menu>
   </div>

@@ -4,7 +4,7 @@
  * @Author: https://github.com/liunanchenFYJJ
  * @Date: 2019-10-28 17:27:04
  * @LastEditors: https://github.com/liunanchenFYJJ
- * @LastEditTime: 2019-10-29 19:16:51
+ * @LastEditTime: 2019-10-30 11:00:01
  -->
 <template>
   <div id="layout">
@@ -58,7 +58,7 @@ export default {
       }
       #content {
         height: calc(100% - 84px);
-        background: lightseagreen;
+        padding: 1em;
       }
       #footer {}
     }

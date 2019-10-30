@@ -4,12 +4,12 @@
  * @Author: https://github.com/liunanchenFYJJ
  * @Date: 2019-10-28 18:48:21
  * @LastEditors: https://github.com/liunanchenFYJJ
- * @LastEditTime: 2019-10-29 19:18:21
+ * @LastEditTime: 2019-10-30 19:26:31
  -->
 <template>
   <div id="navbar">
     <div class="left">
-      <div class="icon">
+      <div id="myicon">
         <i :class="iconClass" @click="toggleSideBar"></i>
       </div>
       <!-- TODO: el-scrollbar -->
@@ -64,7 +64,6 @@ export default {
         });
         return false;
       }
-      console.log(screenfull);
       screenfull.toggle();
       return true;
     },
@@ -80,7 +79,7 @@ export default {
     justify-content: space-between;
     .left {
       display: flex;
-      .icon {
+      #myicon {
         width: 20px;
         padding: 0 15px;
         line-height: $height;

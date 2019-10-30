@@ -4,12 +4,13 @@
  * @Author: https://github.com/liunanchenFYJJ
  * @Date: 2019-09-18 17:42:04
  * @LastEditors: https://github.com/liunanchenFYJJ
- * @LastEditTime: 2019-10-28 18:08:21
+ * @LastEditTime: 2019-10-30 10:57:52
  */
 import Vue from 'vue';
 import Router from 'vue-router';
 import Layout from './layout/index.vue';
 import DashBoard from './views/Dashboard/index.vue';
+import Guide from './views/Guide/index.vue';
 
 Vue.use(Router);
 
@@ -26,6 +27,11 @@ export default new Router({
           path: 'dashboard',
           component: DashBoard,
           name: 'DashBoard',
+        },
+        {
+          path: 'guide',
+          component: Guide,
+          name: 'Guide',
         },
       ],
     },
