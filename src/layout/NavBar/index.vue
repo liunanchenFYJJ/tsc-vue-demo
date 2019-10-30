@@ -23,7 +23,7 @@
       <!-- </el-scrollbar> -->
     </div>
     <div class="right">
-      <i class="iconfont icon-iconfront--copy" @click="toggleFullScreen"></i>
+      <i id="screen" class="iconfont icon-iconfront--copy" @click="toggleFullScreen"></i>
       <el-dropdown>
         <span class="el-dropdown-link">
           admin

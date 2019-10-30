@@ -8,21 +8,21 @@
  */
 const steps = [
   {
-    element: '#icon',
+    element: '#myicon',
     popover: {
       title: 'Hamburger',
       description: 'Open && Close sidebar',
-      position: 'bottom'
-    }
+      position: 'bottom',
+    },
   },
-  // {
-  //   element: '#breadcrumb-container',
-  //   popover: {
-  //     title: 'Breadcrumb',
-  //     description: 'Indicate the current page location',
-  //     position: 'bottom'
-  //   }
-  // },
+  {
+    element: '#screen',
+    popover: {
+      title: 'Breadcrumb',
+      description: 'Indicate the current page location',
+      position: 'bottom',
+    },
+  },
   // {
   //   element: '#header-search',
   //   popover: {
@@ -56,6 +56,6 @@ const steps = [
   //   },
   //   padding: 0
   // }
-]
+];
 
-export default steps
+export default steps;

@@ -9,12 +9,15 @@
 <template>
   <div>
     <div>模拟页面分布引导</div>
-    <el-button @click="startGuide">开始指引</el-button>
+    <!-- TODO: 重要 .prevent.stop 否则出现闪现 -->
+    <el-button @click.prevent.stop="startGuide">开始指引</el-button>
   </div>
 </template>
 <script>
 import Driver from 'driver.js';
 import 'driver.js/dist/driver.min.css';
+import steps from './steps';
+
 const driver = new Driver();
 export default {
   name: 'Guide',
@@ -24,27 +27,19 @@ export default {
     };
   },
   mounted() {
-    // this.driver = new Driver();
-    // this.driver.highlight({
-    //   element: '#myicon',
-    //   popover: {
-    //     title: 'Title for the Popover',
-    //     description: 'Description for it',
-    //   }
-    // });
+    this.driver = new Driver();
   },
   methods: {
     startGuide() {
-      console.log(driver.highlight('#myicon'));
-      driver.highlight({
-        element: '#myicon',
-        popover: {
-          title: 'Title for the Popover',
-          description: 'Description for it',
-        }
-      });
-      // this.driver.defineSteps(steps);
-      // this.driver.start();
+      // this.driver.highlight({
+      //   element: '#myicon',
+      //   popover: {
+      //     title: 'Title for the Popover',
+      //     description: 'Description for it',
+      //   }
+      // });
+      this.driver.defineSteps(steps);
+      this.driver.start();
     },
   },
 };
