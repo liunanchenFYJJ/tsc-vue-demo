@@ -27,6 +27,9 @@ export default new Router({
           path: 'dashboard',
           component: DashBoard,
           name: 'DashBoard',
+          meta: {
+            keepAlive: true,
+          },
         },
         {
           path: 'guide',

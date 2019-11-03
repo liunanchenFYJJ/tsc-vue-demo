@@ -17,7 +17,9 @@
         <tags-view></tags-view>
       </div>
       <div id="content">
-        <router-view></router-view>
+        <keep-alive>
+          <router-view></router-view>
+        </keep-alive>
       </div>
       <!-- <div id="footer">footer</div> -->
     </div>
