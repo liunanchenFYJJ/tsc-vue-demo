@@ -15,10 +15,8 @@
       <!-- TODO: el-scrollbar -->
       <!-- <el-scrollbar wrap-class="scrollbar-wrapper"> -->
         <el-breadcrumb separator="/">
-          <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-          <el-breadcrumb-item>活动管理</el-breadcrumb-item>
-          <el-breadcrumb-item>活动列表</el-breadcrumb-item>
-          <el-breadcrumb-item>活动详情</el-breadcrumb-item>
+          <el-breadcrumb-item :to="{ path: '/' }">dash</el-breadcrumb-item>
+          <el-breadcrumb-item v-for="(item, index) in pathList" :key="index">{{item.name}}</el-breadcrumb-item>
         </el-breadcrumb>
       <!-- </el-scrollbar> -->
     </div>
@@ -47,9 +45,21 @@ import screenfull from 'screenfull';
 
 export default {
   name: 'NavBar',
+  data() {
+    return {
+      pathList: null,
+    };
+  },
   computed: {
     iconClass() {
       return this.$store.state.isSideBarOpen ? 'el-icon-caret-right' : 'el-icon-caret-left';
+    },
+  },
+  watch: {
+    '$route'(to, from) {
+      console.log(to);
+      console.log(from);
+      this.pathList = to.matched.filter(item => item.path === to.fullPath);
     },
   },
   methods: {

@@ -8,24 +8,17 @@
  -->
 <template>
   <div class="sidebar">
-    <!-- <el-menu
-      :default-active="'1'"
-      :collapse="isCollapse"
-      background-color="#303133"
-      text-color="#fff"
-      >
-      <el-menu-item index="1">Dash</el-menu-item>
-      <el-submenu index="2">
-        <el-menu-item index="">2</el-menu-item>
-      </el-submenu>
-    </el-menu> -->
     <el-menu
-      default-active="1-4-1"
+      default-active="/"
       class="el-menu-vertical-demo"
       :collapse="isCollapse"
       background-color="#303133"
       text-color="#fff"
       :router="true">
+      <el-menu-item index="/">
+        <i class="el-icon-menu"></i>
+        <span slot="title">dash</span>
+      </el-menu-item>
       <el-submenu index="1">
         <template slot="title">
           <i class="el-icon-location"></i>
