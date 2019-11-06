@@ -11,6 +11,7 @@ import Router from 'vue-router';
 import Layout from './layout/index.vue';
 import DashBoard from './views/Dashboard/index.vue';
 import Guide from './views/Guide/index.vue';
+import Clipboard from './views/Clipboard/index.vue';
 
 Vue.use(Router);
 
@@ -35,6 +36,11 @@ export default new Router({
           path: 'guide',
           component: Guide,
           name: 'Guide',
+        },
+        {
+          path: 'clipboard',
+          component: Clipboard,
+          name: 'Clipboard',
         },
       ],
     },
