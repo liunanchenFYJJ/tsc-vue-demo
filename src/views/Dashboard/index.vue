@@ -4,7 +4,7 @@
  * @Author: https://github.com/liunanchenFYJJ
  * @Date: 2019-10-28 17:35:26
  * @LastEditors: https://github.com/liunanchenFYJJ
- * @LastEditTime: 2019-10-28 18:04:50
+ * @LastEditTime: 2019-11-04 08:51:34
  -->
 <template>
   <div>
@@ -66,6 +66,14 @@ export default {
     console.log(this.msg);
     console.log(6);
     // debugger
+  },
+  activated() {    
+    console.log('activated');
+    console.log(9);
+  },
+  deactivated() {
+    console.log('deactivated');
+    console.log(10);
   },
   beforeDestroy() {
     console.log('beforeDestroy');
