@@ -1,5 +1,5 @@
 <!--
- * @Descripttion: init
+ * @Descripttion: 面包屑
  * @version:
  * @Author: https://github.com/liunanchenFYJJ
  * @Date: 2019-10-28 18:48:21
@@ -9,19 +9,20 @@
 <template>
   <div id="navbar">
     <div class="left">
+      <!-- 缩放箭头 -->
       <div id="myicon">
         <i :class="iconClass" @click="toggleSideBar"></i>
       </div>
-      <!-- TODO: el-scrollbar -->
-      <!-- <el-scrollbar wrap-class="scrollbar-wrapper"> -->
-        <el-breadcrumb separator="/">
-          <el-breadcrumb-item :to="{ path: '/' }">dash</el-breadcrumb-item>
-          <el-breadcrumb-item v-for="(item, index) in pathList" :key="index">{{item.name}}</el-breadcrumb-item>
-        </el-breadcrumb>
-      <!-- </el-scrollbar> -->
+      <!-- 面包屑 -->
+      <el-breadcrumb separator="/">
+        <el-breadcrumb-item :to="{ path: '/' }">dash</el-breadcrumb-item>
+        <el-breadcrumb-item v-for="(item, index) in pathList" :key="index">{{item.name}}</el-breadcrumb-item>
+      </el-breadcrumb>
     </div>
     <div class="right">
+      <!-- 放大 -->
       <i id="screen" class="iconfont icon-iconfront--copy" @click="toggleFullScreen"></i>
+      <!-- 登出 -->
       <el-dropdown>
         <span class="el-dropdown-link">
           admin

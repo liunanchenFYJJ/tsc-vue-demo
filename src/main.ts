@@ -13,6 +13,7 @@ import 'element-ui/lib/theme-chalk/index.css';
 import './assets/iconfont/iconfont.css';
 import App from './App.vue';
 import router from './router';
+import I18N from './views/I18N/lang/index.js';
 
 Vue.use(ElementUI);
 

@@ -12,6 +12,9 @@ import Layout from './layout/index.vue';
 import DashBoard from './views/Dashboard/index.vue';
 import Guide from './views/Guide/index.vue';
 import Clipboard from './views/Clipboard/index.vue';
+import E404 from './views/404/index.vue';
+import E401 from './views/401/index.vue';
+import I18N from './views/I18N/index.vue';
 
 Vue.use(Router);
 
@@ -41,6 +44,21 @@ export default new Router({
           path: 'clipboard',
           component: Clipboard,
           name: 'Clipboard',
+        },
+        {
+          path: '404',
+          component: E404,
+          name: '404',
+        },
+        {
+          path: '401',
+          component: E401,
+          name: '401',
+        },
+        {
+          path: 'i18n',
+          component: I18N,
+          name: 'I18N',
         },
       ],
     },

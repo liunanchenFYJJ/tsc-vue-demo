@@ -1,5 +1,5 @@
 <!--
- * @Descripttion:
+ * @Descripttion: 左侧导航 TODO: 路由多次点击报错 多级路由配置
  * @version:
  * @Author: https://github.com/liunanchenFYJJ
  * @Date: 2019-10-28 17:46:31
@@ -19,23 +19,15 @@
         <i class="el-icon-menu"></i>
         <span slot="title">dash</span>
       </el-menu-item>
-      <el-submenu index="1">
+      <el-submenu index="">
         <template slot="title">
           <i class="el-icon-location"></i>
-          <span slot="title">导航一</span>
+          <span slot="title">错误页面</span>
         </template>
         <el-menu-item-group>
-          <span slot="title">分组一</span>
-          <el-menu-item index="1-1">选项1</el-menu-item>
-          <el-menu-item index="1-2">选项2</el-menu-item>
+          <el-menu-item index="404">404</el-menu-item>
+          <el-menu-item index="401">401</el-menu-item>
         </el-menu-item-group>
-        <el-menu-item-group title="分组2">
-          <el-menu-item index="1-3">选项3</el-menu-item>
-        </el-menu-item-group>
-        <el-submenu index="1-4">
-          <span slot="title">选项4</span>
-          <el-menu-item index="1-4-1">选项1</el-menu-item>
-        </el-submenu>
       </el-submenu>
       <el-menu-item index="/clipboard">
         <i class="el-icon-menu"></i>
@@ -44,6 +36,10 @@
       <el-menu-item index="/guide">
         <i class="el-icon-setting"></i>
         <span slot="title">使用指引</span>
+      </el-menu-item>
+      <el-menu-item index="/i18n">
+        <i class="el-icon-setting"></i>
+        <span slot="title">国际化</span>
       </el-menu-item>
     </el-menu>
   </div>
