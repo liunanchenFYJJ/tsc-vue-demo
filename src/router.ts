@@ -15,6 +15,8 @@ import Clipboard from './views/Clipboard/index.vue';
 import E404 from './views/404/index.vue';
 import E401 from './views/401/index.vue';
 import I18N from './views/I18N/index.vue';
+import ReloadPage from './views/ReloadPage/index.vue';
+import middlePage from './views/ReloadPage/middlePage.vue';
 
 Vue.use(Router);
 
@@ -59,6 +61,16 @@ export default new Router({
           path: 'i18n',
           component: I18N,
           name: 'I18N',
+        },
+        {
+          path: 'reload',
+          component: ReloadPage,
+          name: 'ReloadPage',
+        },
+        {
+          path: 'middlepage',
+          component: middlePage,
+          name: 'middlePage',
         },
       ],
     },

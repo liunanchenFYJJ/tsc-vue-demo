@@ -41,6 +41,10 @@
         <i class="el-icon-setting"></i>
         <span slot="title">国际化</span>
       </el-menu-item>
+      <el-menu-item index="/reload">
+        <i class="el-icon-refresh"></i>
+        <span slot="title">刷新页面</span>
+      </el-menu-item>
     </el-menu>
   </div>
 </template>

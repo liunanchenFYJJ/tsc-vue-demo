@@ -18,7 +18,7 @@
       </div>
       <div id="content">
         <keep-alive>
-          <router-view></router-view>
+          <router-view v-if="isRouterAlive"></router-view>
         </keep-alive>
       </div>
       <!-- <div id="footer">footer</div> -->
@@ -33,14 +33,33 @@ import TagsView from './TagsView/index.vue';
 export default {
   name: 'Layout',
   components: { SideBar, NavBar, TagsView },
+  // provide 高级属性
+  provide() {
+    return {
+      reload: this.reload,
+      test: 'test',
+    };
+  },
   data() {
-    return {};
+    return {
+      isRouterAlive: true,
+    };
   },
   computed: {
     toggleClass() {
       return {
         hideSideBar: this.$store.state.isSideBarOpen,
       };
+    },
+  },
+  methods: {
+    // 全局引用的搜索方法
+    reload() {
+      this.isRouterAlive = false;
+      // 刷新的时候等页面加载完就变成true
+      this.$nextTick(() => {
+        this.isRouterAlive = true;
+      })
     },
   },
 };
