@@ -59,7 +59,7 @@ export default {
       // 刷新的时候等页面加载完就变成true
       this.$nextTick(() => {
         this.isRouterAlive = true;
-      })
+      });
     },
   },
 };
