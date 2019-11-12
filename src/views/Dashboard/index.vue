@@ -14,8 +14,11 @@
   </div>
 </template>
 <script>
+import mixin from './mixin.js';
+
 export default {
   name: 'DashBoard',
+  mixins: [mixin],
   data() {
     return {
       msg: 'before',
@@ -33,6 +36,7 @@ export default {
   },
   beforeCreate() {
     console.log('beforeCreate');
+    console.log(this.msg_mixin);
     console.log(1);
   },
   created() {
