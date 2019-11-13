@@ -4,7 +4,7 @@
  * @Author: https://github.com/liunanchenFYJJ
  * @Date: 2019-11-13 16:52:03
  * @LastEditors: https://github.com/liunanchenFYJJ
- * @LastEditTime: 2019-11-13 19:08:19
+ * @LastEditTime: 2019-11-13 19:13:24
  -->
 <template>
   <div>
@@ -78,6 +78,7 @@ export default {
       switch (secondCode) {
         case 0x50:
           let devNum = tempArr[3];
+          console.log(`当前连接产品的数量：${devNum}`);
           break;
       
         default:
