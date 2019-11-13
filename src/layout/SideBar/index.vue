@@ -4,7 +4,7 @@
  * @Author: https://github.com/liunanchenFYJJ
  * @Date: 2019-10-28 17:46:31
  * @LastEditors: https://github.com/liunanchenFYJJ
- * @LastEditTime: 2019-10-30 19:18:44
+ * @LastEditTime: 2019-11-13 17:02:39
  -->
 <template>
   <div class="sidebar">
@@ -44,6 +44,10 @@
       <el-menu-item index="/reload">
         <i class="el-icon-refresh"></i>
         <span slot="title">刷新页面</span>
+      </el-menu-item>
+      <el-menu-item index="/gpy">
+        <i class="el-icon-refresh"></i>
+        <span slot="title">高拍仪调用</span>
       </el-menu-item>
     </el-menu>
   </div>

@@ -4,7 +4,7 @@
  * @Author: https://github.com/liunanchenFYJJ
  * @Date: 2019-09-18 17:42:04
  * @LastEditors: https://github.com/liunanchenFYJJ
- * @LastEditTime: 2019-10-30 10:57:52
+ * @LastEditTime: 2019-11-13 17:02:05
  */
 import Vue from 'vue';
 import Router from 'vue-router';
@@ -17,6 +17,7 @@ import E401 from './views/401/index.vue';
 import I18N from './views/I18N/index.vue';
 import ReloadPage from './views/ReloadPage/index.vue';
 import middlePage from './views/ReloadPage/middlePage.vue';
+import GPY from './views/GPY/index.vue';
 
 Vue.use(Router);
 
@@ -71,6 +72,11 @@ export default new Router({
           path: 'middlepage',
           component: middlePage,
           name: 'middlePage',
+        },
+        {
+          path: 'gpy',
+          component: GPY,
+          name: 'GPY',
         },
       ],
     },
