@@ -49,6 +49,10 @@
         <i class="el-icon-refresh"></i>
         <span slot="title">高拍仪调用</span>
       </el-menu-item>
+      <el-menu-item index="/file">
+        <i class="el-icon-refresh"></i>
+        <span slot="title">文件读取</span>
+      </el-menu-item>
     </el-menu>
   </div>
 </template>

@@ -18,6 +18,7 @@ import I18N from './views/I18N/index.vue';
 import ReloadPage from './views/ReloadPage/index.vue';
 import middlePage from './views/ReloadPage/middlePage.vue';
 import GPY from './views/GPY/index.vue';
+import FileReader from './views/FileReader/index.vue';
 
 Vue.use(Router);
 
@@ -77,6 +78,11 @@ export default new Router({
           path: 'gpy',
           component: GPY,
           name: 'GPY',
+        },
+        {
+          path: 'file',
+          component: FileReader,
+          name: 'FileReader',
         },
       ],
     },
