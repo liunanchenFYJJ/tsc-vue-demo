@@ -4,10 +4,11 @@
  * @Author: https://github.com/liunanchenFYJJ
  * @Date: 2019-11-12 08:40:40
  * @LastEditors: https://github.com/liunanchenFYJJ
- * @LastEditTime: 2019-11-13 19:26:19
+ * @LastEditTime: 2019-11-15 18:56:44
  -->
 <template>
   <div>
+    刷新页面<br>
     <el-button type="warning" @click="handleReload1">刷新页面1</el-button>
     - window.location.reload()
     <br>
@@ -20,7 +21,8 @@
     <el-button type="warning" @click="handleReload4">刷新页面4</el-button>
     - inject && provide
     <br>
-    <el-select v-model="value" placeholder="请选择">
+    select 选择框数据异步加载的问题<br>
+    <el-select v-model="value" placeholder="请选择" :disabled="!options1.length">
       <el-option
         v-for="item in options1"
         :key="item.value"
