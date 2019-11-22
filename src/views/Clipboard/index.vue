@@ -2,16 +2,16 @@
   <div>
     剪切板
     <br>
-    <el-input :value="msg" class="input-with-select">
-      <el-button id="btn" slot="append" icon="el-icon-edit" v-popover:popover2 @click="handleClip($event, msg)"></el-button>
+    1. data-clipboard-target 属性
+    <el-input :value="msg" id="foo">
+      <el-button data-clipboard-target="#foo" slot="append" icon="el-icon-edit"></el-button>
+    </el-input>
+    <br>
+    2. 回调事件
+    <el-input :value="msg1" class="input-with-select" id="foo1">
+      <el-button id="btn" data-clipboard-target="#foo1" slot="append" icon="el-icon-edit" @click="handleClip"></el-button>
     </el-input>
     <!--  -->
-    <el-popover
-      ref="popover2"
-      placement="bottom"
-      trigger="click"
-      content="复制成功！">
-    </el-popover>
   </div>
 </template>
 <script>
@@ -22,13 +22,26 @@ export default {
   data() {
     return {
       msg: '我很帅!',
+      msg1: '我很帅, too!',
+      btn: null,
     };
   },
+  mounted() {
+    // this.btn = new ClipboardJS('#btn');
+  },
   methods: {
-    handleClip(e, msg) {
-      console.log(e);
-      console.log(e.target);
-      let c = new ClipboardJS('#btn');
+    handleClip() {
+      // this.$nextTick(() => {
+        this.btn = new ClipboardJS('#btn');
+        this.btn.on('success', (evt) => {
+          this.$message.success('复制成功');
+          evt.clearSelection(); // 清除选中
+          // this.btn.destroy(); // 释放内存
+        });
+        this.btn.on('error', (evt) => {
+          this.$message.error('复制失败');
+        });
+      // });
     },
   },
 };
