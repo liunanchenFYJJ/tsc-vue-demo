@@ -53,6 +53,14 @@
         <i class="el-icon-refresh"></i>
         <span slot="title">文件读取</span>
       </el-menu-item>
+      <el-menu-item index="/socket">
+        <i class="el-icon-refresh"></i>
+        <span slot="title">socket</span>
+      </el-menu-item>
+      <el-menu-item index="/field">
+        <i class="el-icon-refresh"></i>
+        <span slot="title">Field</span>
+      </el-menu-item>
     </el-menu>
   </div>
 </template>

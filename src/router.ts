@@ -19,6 +19,8 @@ import ReloadPage from './views/ReloadPage/index.vue';
 import middlePage from './views/ReloadPage/middlePage.vue';
 import GPY from './views/GPY/index.vue';
 import FileReader from './views/FileReader/index.vue';
+import WebSocket from './views/Websocket/index.vue';
+import Field from './views/Field/index.vue';
 
 Vue.use(Router);
 
@@ -83,6 +85,16 @@ export default new Router({
           path: 'file',
           component: FileReader,
           name: 'FileReader',
+        },
+        {
+          path: 'socket',
+          component: WebSocket,
+          name: 'WebSocket',
+        },
+        {
+          path: 'field',
+          component: Field,
+          name: 'Field',
         },
       ],
     },
