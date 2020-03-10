@@ -4,7 +4,7 @@
  * @Author: https://github.com/liunanchenFYJJ
  * @Date: 2019-09-18 17:42:04
  * @LastEditors: https://github.com/liunanchenFYJJ
- * @LastEditTime: 2019-11-13 17:02:05
+ * @LastEditTime: 2020-03-10 16:11:45
  */
 import Vue from 'vue';
 import Router from 'vue-router';
@@ -21,6 +21,7 @@ import GPY from './views/GPY/index.vue';
 import FileReader from './views/FileReader/index.vue';
 import WebSocket from './views/Websocket/index.vue';
 import Field from './views/Field/index.vue';
+import WebCam from './views/WebCam.vue';
 
 Vue.use(Router);
 
@@ -95,6 +96,11 @@ export default new Router({
           path: 'field',
           component: Field,
           name: 'Field',
+        },
+        {
+          path: 'webCam',
+          component: WebCam,
+          name: 'webCam',
         },
       ],
     },

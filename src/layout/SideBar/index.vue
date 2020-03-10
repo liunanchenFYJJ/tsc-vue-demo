@@ -4,7 +4,7 @@
  * @Author: https://github.com/liunanchenFYJJ
  * @Date: 2019-10-28 17:46:31
  * @LastEditors: https://github.com/liunanchenFYJJ
- * @LastEditTime: 2019-11-13 17:02:39
+ * @LastEditTime: 2020-03-10 16:19:14
  -->
 <template>
   <div class="sidebar">
@@ -60,6 +60,10 @@
       <el-menu-item index="/field">
         <i class="el-icon-refresh"></i>
         <span slot="title">Field</span>
+      </el-menu-item>
+      <el-menu-item index="/webCam">
+        <i class="el-icon-refresh"></i>
+        <span slot="title">web camera</span>
       </el-menu-item>
     </el-menu>
   </div>
