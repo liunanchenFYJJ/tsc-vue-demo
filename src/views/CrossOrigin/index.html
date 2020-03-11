@@ -1,0 +1,92 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: https://github.com/liunanchenFYJJ
+ * @Date: 2020-03-11 10:50:39
+ * @LastEditors: https://github.com/liunanchenFYJJ
+ * @LastEditTime: 2020-03-11 14:13:51
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="name"></div>
+  
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+  <!-- 1 -->
+  <!-- src 可以顺利加载 -->
+  <!-- <script src="https://dtwx3.doit10019.com/dllg/crossOrigin.js"></script> -->
+  <!-- 2 -->
+  <!-- 接口请求方式 同源可以 跨域失败 -->
+  <script>
+    // console.log(name);
+    (function() {
+      // 本地同源
+      // $.ajax({
+      //   type: 'GET',
+      //   url: './crossOrigin.json',
+      //   dataType: 'json',
+      // }).then(function(res) {
+      //   console.log(res);
+      //   $('#name').html(`请求数据成功！${res.name}-${res.age}`);
+      // })
+
+      // 跨域
+      // $.ajax({
+      //   type: 'GET',
+      //   url: 'https://dtwx3.doit10019.com/dllg/crossOrigin.js',
+      //   dataType: 'jsonp',
+      //   jsonp: 'callback', // 'callback默认值'
+      //   jsonpCallback: 'handleCallBack', // 与服务端的保持一致
+      // }).done(function(res) {
+      //   console.log(res);
+      //   $('#name').html(`请求数据成功！${res.name}-${res.age}`);
+      // }).fail(function(error) {
+      //   console.log(error);
+      // })
+
+      // $.ajax({
+      //     url: 'https://apis.map.qq.com/ws/location/v1/ip?key=XWEBZ-RQ2LU-OBGVA-4VNAX-4YU62-B2FDP&output=jsonp',
+      //     type: 'GET',
+      //     contentType: 'application/json',
+      //     dataType: 'JSONP',
+      //     // jsonp: 'callback',
+      //     // jsonpCallback: 'test',
+      //     success: function (res) {
+      //       console.log(res)
+      //     }
+      // })
+      
+    })()
+
+    // jsonp原理 需要服务端把数据拼接 形如crossOrigin.js
+    // function handleCallBack(jsonp) {
+    //   console.log(jsonp);
+    //   $('#name').html(`请求数据成功！${jsonp.name}-${jsonp.age}`);
+    // }
+  </script>
+  <!-- 原理演示 -->
+  <!-- <script src="./crossOrigin.js"></script> -->
+  <!-- <script src="https://dtwx3.doit10019.com/dllg/crossOrigin.js"></script> -->
+  <!-- js 版本 -->
+  <!-- <script>
+    let url = 'https://dtwx3.doit10019.com/dllg/crossOrigin.js';
+    let script = document.createElement('script');
+    script.setAttribute('src', url);
+    document.getElementsByTagName('head')[0].appendChild(script);
+  </script> -->
+  <!-- jquery版本 -->
+  <!-- <script>
+    let url = 'https://dtwx3.doit10019.com/dllg/crossOrigin.js';
+    
+    let script = $('<script>');
+    script.attr('src', url);
+    console.log(script);
+    $('head').append(script);
+  </script> -->
+</body>
+</html>

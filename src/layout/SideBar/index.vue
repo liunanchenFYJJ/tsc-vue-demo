@@ -4,7 +4,7 @@
  * @Author: https://github.com/liunanchenFYJJ
  * @Date: 2019-10-28 17:46:31
  * @LastEditors: https://github.com/liunanchenFYJJ
- * @LastEditTime: 2020-03-10 16:19:14
+ * @LastEditTime: 2020-03-11 10:47:58
  -->
 <template>
   <div class="sidebar">
@@ -64,6 +64,10 @@
       <el-menu-item index="/webCam">
         <i class="el-icon-refresh"></i>
         <span slot="title">web camera</span>
+      </el-menu-item>
+      <el-menu-item index="/crossOrigin">
+        <i class="el-icon-refresh"></i>
+        <span slot="title">跨域</span>
       </el-menu-item>
     </el-menu>
   </div>

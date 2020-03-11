@@ -4,7 +4,7 @@
  * @Author: https://github.com/liunanchenFYJJ
  * @Date: 2020-03-09 16:18:51
  * @LastEditors: https://github.com/liunanchenFYJJ
- * @LastEditTime: 2020-03-10 16:41:19
+ * @LastEditTime: 2020-03-10 16:46:20
 -->
 <template>
   <div class="take_pic">
@@ -31,6 +31,12 @@ export default {
   },
   mounted() {
 
+  },
+  activated() {
+    console.log('active');
+  },
+  deactivated() {
+    console.log('deactive');
   },
   beforeDestroy() {
     console.log('take a pic');
