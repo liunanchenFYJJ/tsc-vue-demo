@@ -19,6 +19,32 @@ Vue.use(ElementUI);
 
 Vue.config.productionTip = false;
 
+Vue.directive('loadmore', {
+	bind(el, binding) {
+    const selectWrap = el.querySelector('.el-table__body-wrapper');
+    // this.$nextTick(() => {
+    //   const SINGLELINE = el.querySelectorAll('.el-table__row');
+    //   console.log(SINGLELINE)
+    // })
+		selectWrap.addEventListener('scroll', function() {
+      let _scrollTop = selectWrap.scrollTop;
+      console.log('scroll')
+      console.log(binding.value)
+      // 表格row的高度
+      // const SINGLELINE = this.querySelectorAll('.el-table__row')[0].offsetHeight;
+      // console.log(SINGLELINE)
+    //   console.log(selectWrap)
+    //   console.log(SINGLELINE)
+		// // if (this.scrollHeight === this.clientHeight) return;
+		// // 	let sign = 100;
+		// // 	const scrollDistance = this.scrollHeight - this.scrollTop - this.clientHeight;
+		// // 	if (scrollDistance <= sign) {
+		// // 		binding.value();
+		// // 	}
+		})
+	}
+});
+
 new Vue({
   router,
   store,
