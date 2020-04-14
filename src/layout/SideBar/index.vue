@@ -69,6 +69,10 @@
         <i class="el-icon-refresh"></i>
         <span slot="title">跨域</span>
       </el-menu-item>
+      <el-menu-item index="/bpmn">
+        <i class="el-icon-refresh"></i>
+        <span slot="title">Bpmn</span>
+      </el-menu-item>
     </el-menu>
   </div>
 </template>

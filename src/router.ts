@@ -23,6 +23,7 @@ import WebSocket from './views/Websocket/index.vue';
 import Field from './views/Field/index.vue';
 import WebCam from './views/WebCam.vue';
 import CrossOrigin from './views/CrossOrigin/index.vue';
+import Bpmn from './views/Bpmn/index.vue';
 
 Vue.use(Router);
 
@@ -107,6 +108,11 @@ export default new Router({
           path: 'crossOrigin',
           component: CrossOrigin,
           name: 'crossOrigin',
+        },
+        {
+          path: 'bpmn',
+          component: Bpmn,
+          name: 'bpmn',
         },
       ],
     },
